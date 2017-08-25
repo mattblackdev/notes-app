@@ -20,8 +20,8 @@ Use a ```debugger``` statement in the test code. Once the app refreshes it shoul
 ### Acceptance (End-to-End) Testing with Chimp
 
 1. Make sure you have the [recommended JDK installed for Chimp](https://chimp.readme.io/docs/installation)
-2. Start the meteor app in app-test mode: ```meteor npm run test-chimp``` or ```meteor test --full-app --driver-package tmeasday:acceptance-test-driver```
-3. Start chimp with ```meteor npm run chimp``` or ```chimp --ddp=http://localhost:3000 --watch --path=tests --chai --jsonOutput=cucumber_output.json```
+2. Start the meteor app in full-app test mode: ```meteor npm run test-chimp``` or ```meteor test --full-app --driver-package tmeasday:acceptance-test-driver```
+3. In another shell start chimp with ```meteor npm run chimp``` or ```chimp --ddp=http://localhost:3000 --watch --path=tests --chai --jsonOutput=cucumber_output.json```
 
 Chimp defaults to opening a Chrome browser. Either make sure you have Chrome or see the [docs](https://chimp.readme.io/docs/getting-started-with-meteor-cucumber) for more information about the ```--browser``` flag options.
 
