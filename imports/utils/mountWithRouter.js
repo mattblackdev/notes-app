@@ -16,4 +16,6 @@ const routerContextConfig = {
   childContextTypes: {router: PropTypes.object}
 }
 
-export const mountWithRouter = Component => mount(Component, routerContextConfig)
+const mountWithRouter = Component => mount(Component, routerContextConfig)
+
+export default mountWithRouter

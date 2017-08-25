@@ -26,14 +26,18 @@ export const PrivateHeader = props => (
   <Wrapper>
     <Header>
       <h1>{props.title}</h1>
-      <Button onClick={props.handleLogout}>Logout</Button>
+      <button onClick={() => {
+        console.log('onClick called', Meteor.user())
+        props.handleLogout()
+        console.log('user', Meteor.user())
+      }}>Logout</button>
     </Header>
   </Wrapper>
 )
 
 PrivateHeader.propTypes = {
   title: PropTypes.string.isRequired,
-  handleLogout: PropTypes.func
+  handleLogout: PropTypes.func.isRequired
 }
 
 export default createContainer(() => {

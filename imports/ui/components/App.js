@@ -3,6 +3,7 @@ import {
   Switch,
   BrowserRouter as Router,
   Route,
+  Redirect
 } from 'react-router-dom'
 import { createContainer } from 'meteor/react-meteor-data'
 import { Meteor } from 'meteor/meteor'
@@ -15,18 +16,24 @@ import NoteList from './NoteList'
 const App = props => (
   <Router>
     <Switch>
-      <Route path="/" exact>
-        {props.user !== undefined
-          ? <div>
-              <PrivateHeader title="Dashboard"/>
-              <NoteList/>
-            </div>
-          : <Login/>
-        }
-      </Route>
-      <Route path="/signup" exact>
-        <Signup/>
-      </Route>
+      <Route exact path="/" render={() => (
+        props.user ? (
+          <div>
+            <PrivateHeader title="Dashboard"/>
+            <NoteList/>
+          </div>
+        ) : (
+          <Redirect to="/login" />
+        )
+      )}/>
+      <Route path="/login" render={() => props.user
+        ? <Redirect to="/" />
+        : <Login />
+      }/>
+      <Route path="/signup" render={() => props.user
+        ? <Redirect to="/" />
+        : <Signup />
+      }/>
     </Switch>
   </Router>
 )

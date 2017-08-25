@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "test": "meteor test --debug-port 5858 --driver-package=practicalmeteor:mocha"
+    "test": "meteor test --debug-port 5858 --driver-package practicalmeteor:mocha",
+    "test-chimp": "meteor test --full-app --driver-package tmeasday:acceptance-test-driver",
+    "chimp": "chimp --ddp=http://localhost:3000 --watch --path=tests --chai --jsonOutput=cucumber_output.json"
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
@@ -21,6 +23,7 @@
   "devDependencies": {
     "chai": "^4.1.1",
     "chai-enzyme": "^0.8.0",
+    "chimp": "^0.49.1",
     "enzyme": "^2.9.1",
     "react-addons-test-utils": "^15.6.0",
     "react-router-test-context": "^0.1.0",
