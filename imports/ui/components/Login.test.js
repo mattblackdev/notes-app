@@ -9,7 +9,7 @@ chai.use(sinonChai)
 chai.use(chaiEnzyme)
 
 import { Login } from './Login'
-import mountWithRouter from '../utils/mountWithRouter' // mountWithRouter injects a stub of react router context
+import mountWithRouter from '../../utils/mountWithRouter' // mountWithRouter injects a stub of react router context
 
 if (Meteor.isClient) {
   describe('<Login />', function () {

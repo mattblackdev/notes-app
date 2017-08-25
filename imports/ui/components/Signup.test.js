@@ -10,7 +10,7 @@ chai.use(sinonChai)
 chai.use(chaiEnzyme)
 
 import { Signup } from './Signup'
-import mountWithRouter from '../utils/mountWithRouter'
+import mountWithRouter from '../../utils/mountWithRouter'
 
 if (Meteor.isClient) {
   describe('<Signup />', function () {
