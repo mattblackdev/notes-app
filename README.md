@@ -23,7 +23,7 @@ Use a ```debugger``` statement in the test code. Once the app refreshes it shoul
 2. Start the meteor app in app-test mode: ```meteor npm run test-chimp``` or ```meteor test --full-app --driver-package tmeasday:acceptance-test-driver```
 3. Start chimp with ```meteor npm run chimp``` or ```chimp --ddp=http://localhost:3000 --watch --path=tests --chai --jsonOutput=cucumber_output.json```
 
-Chimp defaults to opening a Chrome browser. Either make sure you have Chrome or see the [docs] (https://chimp.readme.io/docs/getting-started-with-meteor-cucumber) for more information about the ```--browser``` flag options.
+Chimp defaults to opening a Chrome browser. Either make sure you have Chrome or see the [docs](https://chimp.readme.io/docs/getting-started-with-meteor-cucumber) for more information about the ```--browser``` flag options.
 
 #### Debugging Chimp
 Setting up debugging for Chimp test is a little more involved. [See the docs](https://chimp.readme.io/docs/debugging) for the best explanation.
